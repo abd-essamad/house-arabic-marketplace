@@ -1,0 +1,10 @@
+.spinner {
+ position: absolute;
+ top: 20%;
+ left: 45%;
+ 
+}
+.spinner img {
+    width: 25px;
+    height: 25px;
+}

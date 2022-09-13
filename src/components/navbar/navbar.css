@@ -1,0 +1,146 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1rem 5rem;
+    /* background-color: rgb(48, 181, 119); */
+    background-color: rgb(6, 63, 77);
+    color: #fff;
+    font-size: 15px;
+    
+}
+.navbar .nav ul,.navbar .auth-nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar ul li{
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    
+}
+.navbar ul li a{
+  margin-top: 0.2rem;
+}
+.navbar ul li:hover {
+    transform: scale(1.02);
+    transition: transform 300ms ease-in;
+    opacity: 1;
+}
+.navbar ul li .icon{
+    margin-left: 5px;
+}
+.icon {
+    width: 16px;
+    height: 16px;
+}
+.icon.logout {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+}
+.menu .iconMenu {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.menu .iconMenu:hover {
+   transform: scale(1.02);
+   transition: transform 300ms ease-in;
+   opacity: 1;
+
+}
+.menu {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    
+    
+}
+.nav-menu ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(32, 91, 106);
+    padding: 1rem 0;
+    border-radius: 5px;
+}
+.nav-menu ul li {
+    margin-bottom: 0.4rem;
+}
+
+
+@media (max-width:850px){
+    .navbar {
+        flex-direction: column;
+        position: relative;
+        padding-left: 0;
+    }
+    .navbar .auth-nav {
+        margin-bottom: 1rem;
+
+    }
+    .navbar .nav ul li:last-child{
+        position: absolute;
+        right: 5px;
+        top:50%;
+        transform: translateY(-50%);
+      }
+}
+@media (max-width:550px){
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 1rem;
+        padding-left: 0;
+        position: relative;
+        height: 100px;
+    }
+    .navbar .auth-nav, .navbar .nav {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        
+    }
+    .menu .nav-menu {
+        margin-top: 7rem;
+    }
+    .menu .nav-menu ul {
+        transform: translateY(-8px);
+        visibility: hidden;
+    }
+    .menu.active .nav-menu ul{
+        visibility: visible;
+        
+    }
+    .menu .logo-menu , .menu .nav-menu{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .menu .logo-menu {
+        right: 50px;
+    }
+    .menu .nav-menu{
+        left: 10px;
+    }
+    .menu .icon.logout {
+        margin-right: 0;
+    }
+    
+}

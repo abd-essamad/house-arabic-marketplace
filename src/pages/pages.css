@@ -1,0 +1,93 @@
+/* Sign In */
+.signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    
+    
+    
+}
+.signin .container {
+    background-color: rgba(0,0,0,0.6);
+    margin: 4rem 2rem;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    position: relative;
+
+}
+.signin h1 {
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.signin form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 30vh;
+    
+}
+.signin form input {
+    width: 100%;
+    padding: 0.7rem 2rem;
+    border: none;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.signin form input::placeholder {
+    position: absolute;
+    right: 20px;
+}
+.signin form input:focus {
+    outline: 0;
+}
+.signin form button {
+    padding: 0.5rem 2rem;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(8, 55, 67);
+    color: #fff;
+    display: inline-block;
+    transition: transform 300ms ease;
+    opacity: 0.8;
+    border-radius: 3px;
+}
+.signin form button:hover {
+    transform: scale(1.01);
+    transition: transform 300ms ease;
+    opacity: 1;
+}
+.signin button:active {
+    transform: scale(0.95);
+}
+.signin p{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0.5rem;
+    text-align: right;
+}
+.signin .text-blue {
+    color: rgb(18, 122, 148);
+    margin-right: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.signin .text-blue:hover {
+    border-bottom: 1px solid rgb(18, 122, 148);
+}
+@media (max-width:850px){
+    body {
+     height: 100%;
+    }
+    
+ }
+ @media (max-width:550px){
+   
+   
+ }
