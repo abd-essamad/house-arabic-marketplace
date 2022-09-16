@@ -4,15 +4,20 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --blue-color:rgba(1, 176, 133,0.7);
+}
 body{
   font-family: 'Droid Arabic Kufi', serif;
-  background: url('../src/assets/bg_sign.jpg')no-repeat right/cover;
-  height: 100vh;
+  background: url('../src/assets/background.png') ; 
+  height: 100%;
+ 
   
 }
 
 a{
   text-decoration: none;
+  color: #fff;
 }
 li{
   list-style: none;

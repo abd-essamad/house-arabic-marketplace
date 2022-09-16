@@ -5,10 +5,26 @@
     flex-direction: row;
     padding: 1rem 5rem;
     /* background-color: rgb(48, 181, 119); */
-    background-color: rgb(6, 63, 77);
+    /* background-color: rgb(6, 63, 77); */
+    background-color: var(--blue-color);
     color: #fff;
     font-size: 15px;
     
+    
+}
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    background-color: rgb(32, 91, 106)
+}
+.top-nav p{
+    margin-left: 0.5rem;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.5rem;
+    font-size: 15px;
 }
 .navbar .nav ul,.navbar .auth-nav ul{
     display: flex;
@@ -68,6 +84,8 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
+    padding-bottom: 1.5rem;
+    
     
     
 }
@@ -83,7 +101,16 @@
 .nav-menu ul li {
     margin-bottom: 0.4rem;
 }
-
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid var(--blue-color);
+    position: absolute;
+    top: 2.2rem;
+    display: none;
+}
 
 @media (max-width:850px){
     .navbar {
@@ -118,20 +145,29 @@
         
     }
     .menu .nav-menu {
-        margin-top: 7rem;
+        margin-top: 6rem;
     }
     .menu .nav-menu ul {
         transform: translateY(-8px);
         visibility: hidden;
     }
+    .menu.active .triangle {
+        display: block;
+        
+    }
     .menu.active .nav-menu ul{
         visibility: visible;
+        margin-top: 1.5rem;
         
+    }
+    .menu.active .nav-menu {
+        margin-top: 7rem;
     }
     .menu .logo-menu , .menu .nav-menu{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 4;
     }
     .menu .logo-menu {
         right: 50px;

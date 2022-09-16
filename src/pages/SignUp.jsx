@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate,useLocation } from "react-router-dom"
 import {getAuth, createUserWithEmailAndPassword, updateProfile}
 from 'firebase/auth'
+import {toast} from 'react-toastify'
 import Spinner from "../components/spinner/Spinner"
 import {db} from '../firebase.config'
 import { setDoc,doc , serverTimestamp } from "firebase/firestore"
@@ -39,8 +40,10 @@ function SignUp() {
         await setDoc(doc(db,'users',user.uid),formDataCopy)
         navigate('/')
         setLoading(false)
+        toast.success('تم انشاء حساب جديد')
      } catch (error) {
-        console.log(error)
+        toast.error('المعلومات غير صحيحة')
+        setLoading(false)
      }
   }
    
@@ -53,7 +56,7 @@ function SignUp() {
   return (
     <div className="signin">
       <div className="container" style={{padding: location.pathname ==='/sign-up' && '2rem 3rem'}}>
-        <h1 style={{marginBottom: location.pathname === '/sign-up' && '3rem' }}>انشاء حساب جديد</h1>
+        <h1 style={{marginBottom: location.pathname === '/sign-up' && '4rem' }}>انشاء حساب جديد</h1>
         {loading ? <Spinner/> : ''}
         <div  className="form">
           <form onSubmit={onSubmit}>
