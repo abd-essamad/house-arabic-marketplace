@@ -1,7 +1,7 @@
 import rent from '../../assets/rent.png'
 import { BathroomIcon, BedroomIcon,SurfaceIcon } from '../navbar/imports'
 import { Link } from 'react-router-dom'
-const ListingItem = ({listing,id}) => {
+const ListingItem = ({listing,id, onDelete}) => {
   return (
       <div className="rent"  >
         <Link to={`/category/${listing.type}/${id}`}>
@@ -17,9 +17,12 @@ const ListingItem = ({listing,id}) => {
            <div className="bathbed">
             <span className='bathroom'><BathroomIcon className='icon' fill='#fff'/>{listing.bathrooms}</span>
             <span className='bedroom'><BedroomIcon className='icon' fill='#fff'/> {listing.bedrooms}</span>
-            <span className='surface'><SurfaceIcon className='icon'  fill='#fff'/>30 m<sup>2</sup></span>
+            <span className='surface'><SurfaceIcon className='icon'  fill='#fff'/>{listing.surface} m<sup>2</sup></span>
            </div>
         </Link>
+        {onDelete && (
+          <button onClick={()=>onDelete(listing.id, listing.name)}>حدف </button>
+        )}
       </div>
 
   )

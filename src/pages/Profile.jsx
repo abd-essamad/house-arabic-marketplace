@@ -1,13 +1,13 @@
 import {getAuth,updateProfile} from 'firebase/auth'
-import { useState ,useEffect} from 'react'
-import {  Link } from 'react-router-dom'
+import { useState } from 'react'
+import {  Link,  } from 'react-router-dom'
 import { updateDoc,doc } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import {toast} from 'react-toastify'
+import {FaArrowLeft} from 'react-icons/fa'
 function Profile() {
   const auth = getAuth()
   const [changeDetails, setChangeDetails] = useState(false)
-  
   const [formData, setFormData] = useState({
     name: auth.currentUser.displayName,
     email: auth.currentUser.email,
@@ -56,7 +56,7 @@ function Profile() {
                     }
                 </p>
           </form>
-          
+          <Link className="link" to='/create-listing'> <FaArrowLeft className='ic'/>لديك عقار للبيع أو للكراء من هنا </Link>
         </div>
         
       </div>

@@ -22,4 +22,8 @@ a{
 li{
   list-style: none;
 }
-
+.small {
+  color: rgb(76, 73, 73);
+  font-size: 13px;
+  
+}
