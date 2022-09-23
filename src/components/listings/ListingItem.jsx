@@ -5,12 +5,12 @@ const ListingItem = ({listing,id, onDelete}) => {
   return (
       <div className="rent"  >
         <Link to={`/category/${listing.type}/${id}`}>
-           <img src={listing.imageUrls[0]} width='50px' height='50px' alt={listing.name} />
+           <img src={listing.imgUrls[0]} width='50px' height='50px' alt={listing.name} />
            <p className="price">{listing.offer ?
             listing.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-            : listing.regularPricetoString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} Dh
+            : listing.regularPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} Dh
             {listing.type === 'rent' &&  '/Mois'}</p>
-           <p className="furnished">مفرشة</p>
+           <p className="furnished">{listing.furnished ? 'مفرشة' : 'غير مفرشة'}</p>
            <p className="sale" style={{color: listing.type === 'rent' ? 'yellow' : 'green'}}>{listing
            .type === 'rent' ? 'للكراء' : 'للبيع'}</p>
            <p className='tit'>{listing.name}</p>

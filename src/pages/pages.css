@@ -485,12 +485,7 @@
     padding: 5px;
     cursor: pointer;
 }
-.pro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
+
 .pro button {
     background-color: rgb(62, 202, 62);
     color: #fff;

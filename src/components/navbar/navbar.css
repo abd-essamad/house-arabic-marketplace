@@ -94,7 +94,7 @@
     align-items: flex-end;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: rgb(32, 91, 106);
+    background-color: var(--blue-color);
     padding: 1rem 0;
     border-radius: 5px;
 }
