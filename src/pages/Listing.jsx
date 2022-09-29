@@ -36,7 +36,7 @@ const Listing = () => {
     return <Spinner  />
   }
   return (
-    <main>
+    <main className='swiper'>
        <Swiper slidesPerView={1} pagination={{ clickable: true }}>
         {listing.imgUrls.map((url,index) => (
           <SwiperSlide key={index}>
@@ -71,7 +71,7 @@ const Listing = () => {
         </p>
         {listing.offer && (
           <p className='discountedPrice'>
-            ${listing.regularPrice - listing.discountedPrice} discount
+            {listing.regularPrice - listing.discountedPrice} Dh تخفيض
           </p>
         )}
         <ul className="listingDetailsList">
@@ -84,8 +84,8 @@ const Listing = () => {
            <li>{listing.parking && 'موقف سيارات متوفر' }</li>
            <li>{listing.furnished ?  'مجهزة بفراش': 'غير مجهزة بفراش'}</li>
         </ul>
-        <p className="locationMap">العنوان على الخريطة</p>
              <div className="leafletContainer">
+             <p className="locationMap">العنوان على الخريطة</p>
               <MapContainer style={{height: '300px', width: '500px'}}
               center={[listing.geolocation.lat, listing.geolocation.lng]}
               zoom={13} 
@@ -103,7 +103,7 @@ const Listing = () => {
 
             {auth.currentUser?.uid !== listing.userRef && (
               <Link to={`contact/${listing.userRef}?listingName=${listing.name}`} className="primaryButton" >
-                  <p> تواصل مع مالك العقار </p>
+                  <p className='contant-landlord'> تواصل مع مالك العقار </p>
               </Link>
             )}
     </div>
