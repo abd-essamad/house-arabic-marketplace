@@ -41,8 +41,8 @@ const Category = () => {
     <div className="profile">
       <div className="profile__header">
          {params.categoryName === 'rent' ? 
-         <p><span>عقارات للكراء</span></p> :
-         <p><span>عقارات للبيع</span></p> 
+         <p className="cat-sell"><span>عقارات للكراء</span></p> :
+         <p className="cat-rent"><span>عقارات للبيع</span></p> 
          } 
         </div>
         {loading ? (

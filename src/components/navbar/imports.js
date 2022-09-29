@@ -8,6 +8,7 @@ import {ReactComponent as LogoutIcon} from '../../assets/logout.svg'
 import {ReactComponent as BedroomIcon} from '../../assets/bathroom.svg'
 import {ReactComponent as BathroomIcon} from '../../assets/bedroom.svg'
 import {ReactComponent as SurfaceIcon} from '../../assets/surface.svg'
+import {ReactComponent as ShareIcon} from '../../assets/shareIcon.svg'
 
 export {
     HomeIcon,
@@ -19,5 +20,6 @@ export {
     LogoutIcon,
     BathroomIcon,
     BedroomIcon,
-    SurfaceIcon
+    SurfaceIcon,
+    ShareIcon
 }

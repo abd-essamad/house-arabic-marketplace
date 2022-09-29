@@ -1,7 +1,8 @@
 import rent from '../../assets/rent.png'
 import { BathroomIcon, BedroomIcon,SurfaceIcon } from '../navbar/imports'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 const ListingItem = ({listing,id, onDelete}) => {
+  const navigate = useNavigate()
   return (
       <div className="rent"  >
         <Link to={`/category/${listing.type}/${id}`}>
@@ -21,7 +22,10 @@ const ListingItem = ({listing,id, onDelete}) => {
            </div>
         </Link>
         {onDelete && (
-          <button onClick={()=>onDelete(listing.id, listing.name)}>حدف </button>
+          <div className="buttons-edit">
+          <button className='delete' onClick={()=>onDelete(listing.id, listing.name)}>حدف </button>
+          <button className='update' onClick={()=>navigate(`/edit-listing/${id}`)} >تعديل</button>
+          </div>
         )}
       </div>
 

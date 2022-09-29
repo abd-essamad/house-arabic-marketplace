@@ -5,15 +5,68 @@
   padding: 0;
 }
 :root {
-  --blue-color:rgba(1, 176, 133,0.7);
+  --blue-color:#0a192f;
 }
 body{
   font-family: 'Droid Arabic Kufi', serif;
-  background: url('../src/assets/background.png') ; 
   height: 100%;
  
   
 }
+.profile {
+  color: #FFF;
+  background-color: #030811;
+}
+.delete,.update {
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #fff;
+  margin: 0.5rem 2rem;
+}
+
+.delete {
+  background-color: rgb(187, 51, 51);
+}
+.update {
+  background-color: rgba(12, 129, 37, 0.9);
+}
+.delete:active,.update:active {
+transform: scale(0.98);
+}
+.above {
+ display: flex;
+ align-items: flex-start;
+ justify-content: flex-start;
+ background-color: rgb(19, 82, 85);
+}
+.above .right {
+  margin-top: 4rem;
+}
+.home__header.house.offers.profile {
+  background-color: transparent;
+  margin-left: 2rem;
+  margin-right: 4rem;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: 0;
+  gap: 0;
+}
+.home__header.house.offers.profile .rent .tit {
+  background-color: #030811;
+}
+.home__header.house.offers.profile .rent .price {
+  bottom: 130px;
+}
+
+.home__header.house.offers.profile .rent  {
+ margin: 1rem ;
+ padding: 0;
+ width: 300px;
+ background-color:transparent;
+}
+
 
 a{
   text-decoration: none;

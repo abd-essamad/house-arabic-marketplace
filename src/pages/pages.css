@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    
+    background-color: rgb(12, 51, 52);
+    border-top: 1px solid rgb(19, 82, 85);
     
     
 }
@@ -99,10 +100,22 @@
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
+    background-color: rgb(12, 51, 52);
+    border-top: 1px solid rgb(16, 77, 79);
+
+    
     
  }
+ .profile .cat-sell,.profile .cat-rent {
+    padding: 3px 10px;
+    border-right: 5px solid #fff;
+    background-color: rgb(8, 43, 44);
+ }
+ .profile.listing {
+    border-top: 1px solid  rgb(16, 77, 79);
+ }
  .profile__header {
-    background-color: rgb(114, 110, 110);
+    background-color: transparent;
     width: 100%;
     color: #fff;
     display: flex;
@@ -122,6 +135,7 @@
  .profile__body p {
     font-size: 1.5rem;
     color: #fff;
+
     
  }
  .profile__body form {
@@ -229,7 +243,9 @@
 .profile__body.password .sign-in:hover {
     cursor: pointer;
 }
-
+.right .profile__header .title {
+    margin-left: 2rem;
+}
 /* Home  */
 
 .home__header {
@@ -238,7 +254,7 @@
     justify-content: flex-end;
     flex-direction: column;
     margin: 3rem 4rem;
-    background-color: rgba(87, 101, 89, 0.8);
+    background-color: rgb(12, 51, 52);
     padding: 1rem;
     color: #fff;
     border-radius: 6px;
@@ -519,6 +535,25 @@
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
+}
+.shareIconDiv {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+.linkCopied {
+    z-index: 100;
+    right: 5rem;
+    position: absolute;
+    top: 10px;
+    color: rgb(76, 244, 126);
+}
+main {
+    position: relative;
 }
 
 @media (max-width:550px){
